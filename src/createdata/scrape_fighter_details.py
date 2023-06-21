@@ -212,7 +212,7 @@ class FighterDetailsScraper:
                 self.FIGHTER_DETAILS_PATH, index_col="fighter_name"
             )
 
-            fighter_details_df = new_fighter_details_df.append(
+            fighter_details_df = new_fighter_details_df._append(
                 old_fighter_details_df, ignore_index=False
             )
 
