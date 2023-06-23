@@ -333,7 +333,7 @@ class Preprocessor:
         self.store["R_Reach_cms"].fillna(self.store["R_Height_cms"], inplace=True)
         self.store["B_Reach_cms"].fillna(self.store["B_Height_cms"], inplace=True)
         #print(self.store)
-        #self.store.fillna(self.store.median(), inplace=True)
+        self.store.fillna(self.store.median(numeric_only=True), inplace=True)
 
         self.store["R_Stance"].fillna("Orthodox", inplace=True)
         self.store["B_Stance"].fillna("Orthodox", inplace=True)
